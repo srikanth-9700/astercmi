@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aster CMI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="keywords" content="Aster CMI">
+  <meta name="description" content="Aster CMI">
+  <!-- Favicons -->
+  <link href="images/Aster_logo_white.png" rel="icon">
+  <link href="images/Aster_logo_white.png" rel="apple-touch-icon">
+ 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .btn-custome {
+background-image: linear-gradient(to bottom right, #17ead9, #6078ea); border-radius: 4px; 
+color: #FFFFFF;
+  font-family: StagSans;
+  font-size: 15px;
+  letter-spacing: 1px;
+       padding: 12px 15px;
+    border: 0px;
+}
+  
+  .doctors-bg{padding: 35px;
+    background: #F9F9FF;
+    margin: 0 10px;}
+	.col-lg-6 {
+	/*width:48%;*/
+	}
+.sub-heading {
+	 color: #22B78E;
+    font-family: StagSans,sans-serif;
+  font-size: 31px;
+  letter-spacing: 1.28px;
+  line-height: 44px;
+  text-align: left;
+    margin-bottom: 25px;
+
+  }
+  .sec-sub-heading {
+   color: #22B78E;
+    font-family: StagSans,sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.99px;
+  line-height: 44px;
+  text-align: center;}
+  
+.doct-para {
+  color: #1D5AA6;
+    font-family: StagSans,sans-serif;
+  font-size: 15px;
+  text-align: center;
+  }
+  .border {
+   background-color: #F9F9FF;
+  border-radius: 4px;
+  width: 60%;
+    margin: 35px auto;
+  }
+  li {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+	color: #000000;
+    font-family: StagSans,sans-serif;
+  font-size: 14px;
+  line-height: 39px;
+  text-align: left;
+}
+.trans ul li:before {
+    content: "+";
+    color: red;
+    border: 1xp solid #ccc;
+    border: 1px solid #cccccc42;
+        padding: 2px 3px 2px 3px;
+    border-radius: 50%;
+    background: #cccccc42;
+    margin-right: 15px;
+}
+h4 {
+    font-family: Titillium,sans-serif;
+}
+
+h2 {
+    font-family: Titillium,sans-serif;
+}
+a {
+    font-family: Titillium,sans-serif;
+}
+
+* {
+    font-family: Titillium,sans-serif;
+}
+p {
+    margin: 0 0 30px !important;
+}
+.group {
+background-color: #FFFFFF;
+    border: 1px solid #E5EAFF;
+    border-radius: 4px;
+    box-shadow: 3px 5px 29px 0 rgb(187 165 228 / 10%);
+    width: 100%;
+    max-height: 200px;
+    min-height: 180px;
+    padding: 20px 30px;
+	    margin-top: 30px;
+	}
+	.group img {
+    margin-bottom: 13px !important;
+}
+	.group-para {
+ color: #000000;
+    font-family: StagSans;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: left;
+    margin-top: 10px;
+}
+.bone-marrow-transpla {
+       color: #FFFFFF;
+    font-family: StagSans;
+    font-size: 18px;
+    line-height: 26px;
+    background-image: linear-gradient(to bottom right, #2EC4B8, #6078EA);
+    border-radius: 4px;
+    height: 95px;
+    padding: 15px 10px;
+	    margin: 35px 0px;
+  }
+  .medicines-and-in-cer {
+  color: #000000;
+  font-family: StagSans;
+  font-size: 17px;
+  line-height: 20px;
+  /*width: 623px;*/
+  text-align: left;
+      margin: 20px 0px;
+  
+}
+.border-top{
+   border-bottom: 1px solid #ECECFF;
+   width:100%;
+   margin:10px auto;
+
+}
+hr.dr-hr {
+    width: 10%;
+    border: 0.3px solid #22B78E;
+}
+.tran ul {
+padding-left: 5px;
+}
+
+.panel {
+    border: none;
+	
+	}
+.panel-default>.panel-heading {
+    color: #1d5aa6;
+	background:none;
+	
+    padding: 15px 0px !important;
+}
+
+ #accordion .panel-heading { padding: 0;}
+#accordion .panel-title > a {
+	display: block;
+	padding: 0.4em 0.6em;
+    outline: none;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+/*#accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
+    content:"\e113";
+    float: left;
+    font-family: 'Glyphicons Halflings';
+	margin-right :1em;
+}
+#accordion .panel-title > a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before  {
+    content:"\e114";
+}*/
+#accordion .panel-title > a.accordion-toggle::after, #accordion a[data-toggle="collapse"]::after  {
+    content:"\e253";
+    float: right;
+    font-family: 'Glyphicons Halflings';
+	margin-right :1em;
+}
+#accordion .panel-title > a.accordion-toggle.collapsed::after, #accordion a.collapsed[data-toggle="collapse"]::after  {
+    content:"\e252";
+}
+
+.panel-body ul li::before {
+    content:"\e013";
+    float: left;
+    font-family: 'Glyphicons Halflings';
+    margin-right: 1em;
+	color:#6bcfb3;
+	font-size: small;
+    border: 0px;
+    background: none;
+}
+.panel-body ul{
+    padding:0px;
+}
+.panel-body {
+    padding: 25px 15px;
+}
+
+.panel-group .panel+.panel {
+    margin-bottom: 1px;
+	margin-top:0px;
+}
+
+.panel-group .panel {
+    margin-bottom: 1px !important;
+}
+
+footer {
+background-color: #272727;
+  width: 100%;
+  height: 200px;
+    padding: 20px 0px;
+}
+footer .aster-cmi-all-right {
+  color: #ccc;
+  font-family: StagSans;
+  font-size: 14px;
+  letter-spacing: 1.12px;
+  line-height: 17px;
+    text-align: center;
+    padding: 0px;
+}
+
+footer .aster-cmi-all-right a{
+  color: #ccc;
+  font-family: StagSans;
+  font-size: 14px;
+  letter-spacing: 1.12px;
+  line-height: 17px;
+    text-align: center;
+    padding: 25px 0;
+}
+footer .aster-cmi-all-right a:hover{
+  color: #ccc;text-decoration:none;
+}
+footer ul li {
+    float: left;
+    padding: 20px 5px;
+    position: relative;
+    left: 40%;
+}
+footer hr{
+width:100%;
+border: 1px solid rgba(255, 255, 255, 0.21);
+
+}
+footer .footer-right {
+float:right;
+}
+footer .footer-right img {
+    
+    width: 40px;
+    max-width: 45px; 
+	position: relative;
+    bottom: 13px;
+    -webkit-transition: all 0.10s linear;
+    -moz-transition: all 0.10s ease;
+    -ms-transition: all 0.10s ease;
+    -o-transition: all 0.10s ease;
+    transition: all 0.10s ease;
+}
+
+ul.footer-right {
+    margin-right: 30px;
+}
+
+
+header {
+height:500px;
+width:100%;
+max-height:600px;
+background-image:url("images/Banner_mage.png");
+background-repeat: no-repeat;
+
+
+}
+header a{
+    background: #DD5A6A;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #00000052;
+}
+header a:hover{
+    background: #fff;
+    padding: 10px 15px;
+    color: #DD5A6A;
+    border-radius: 3px;
+    border: 1px solid #00000052;
+	text-decoration:none;
+}
+
+header h1{
+    font-family: Titillium,sans-serif;
+font-size: 30px;
+  letter-spacing: 1.28px;
+  line-height: 40px;
+  color:#fff;
+}
+
+header p{
+ color: #FFFFFF;
+  
+    font-family: StagSans,sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  line-height: 30px;
+}
+p{
+    font-family: StagSans,sans-serif;
+
+}
+.header-right {
+    background: #fff;
+    padding: 20px 35px;
+    margin: 0px 40px;
+}
+header form h2 {
+color:#000;
+font-size:24px;
+}
+.form-control {
+
+    border: 1px solid #cccccc54 !important;
+    border-radius: 0px !important;
+}
+textarea.form-control {
+resize:none;
+}
+.form-group {
+    margin-bottom: 0px !important;
+}
+
+header form .btn-primary {
+    color: #fff;
+    background-color: #dd5a6a;
+    border-color: #dd5a6a;
+    color: #FFFFFF;
+    font-family: StagSans;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 20px 0px;
+    border-radius: 3px;
+    padding: 8px 25px;
+}
+
+header form .btn-primary:hover {
+    color: #dd5a6a;
+    background-color: #fff;
+    border-color: #dd5a6a;
+}
+
+
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.carousel .item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 340px
+}
+
+.carousel .item a {
+    color: #eb7245
+}
+i.fa.fa-long-arrow-left {
+    color: #272424;
+}
+i.fa.fa-long-arrow-right {
+    color: #272424;
+}
+.carousel .img-box {
+   width: 120px;
+    height: 120px;
+    /*margin: 0 auto;*/
+    border-radius: 50%
+}
+
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%
+}
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+	clear: both;
+	text-align:left;
+}
+
+.testimonial {
+    color: #000000;
+    font: Times Roman
+}
+
+.carousel .overview {
+    text-align: left;
+    padding-bottom: 5px;
+    top: 50px;
+    position: relative;
+}
+
+.carousel .overview b {
+    color: #333;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 5px
+}
+
+.carousel .star-rating i {
+    font-size: 18px;
+    color: #ffdc12
+}
+
+.carousel .carousel-control {
+    width: 30px;
+    height: 30px;
+   /* border-radius: 50%;
+    background: #999;*/
+    background: transparent;
+    text-shadow: none;
+    top: 4px
+}
+
+.carousel-control i {
+    font-size: 20px;
+    margin-right: 2px
+}
+
+.carousel-control.left {
+    left: auto;
+    right: 40px
+}
+
+.carousel-control.right i {
+    margin-right: -2px
+}
+
+.carousel .carousel-indicators {
+    bottom: 15px
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 11px;
+    height: 11px;
+    margin: 1px 5px;
+    border-radius: 50%
+}
+
+.carousel-indicators li {
+    background: #e2e2e2;
+    border-color: transparent
+}
+
+.carousel-indicators li.active {
+    border: none;
+    background: #888
+}
+
+.testimonial .sub-heading {
+    color: #22B78E;
+    font-family: StagSans;
+    font-size: 31px;
+    letter-spacing: 1.28px;
+    line-height: 44px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.carsoul-iteam-left {
+    float: left;
+	width:15%;
+}
+
+.carsoul-iteam-right {
+    float: left;
+	width:85%;
+}
+.booking {
+width:100%;
+margin:20px auto;
+text-align:center;
+
+}
+.testimonial .booking a {
+    background: #DD5A6A;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #00000052;
+	text-decoration:none; 
+}
+
+.testimonial a:hover {
+	text-decoration:none;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 230px;
+    max-height: 300px;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+footer ul li {
+position:relative;
+    left: 15% !important;
+
+}
+
+.header-right {
+    background: #fff;
+    padding: 20px 35px;
+    margin: 120px 5px 50px 5px;
+    border: 1px solid #ccc;
+}
+.header-left {
+    padding: 10px 15px;
+}
+
+.carsoul-iteam-left {
+    float: left !important;
+	width:50%  !important;
+}
+
+.carsoul-iteam-right {
+    float: right  !important;
+	width:50% !important;
+}
+
+}
+
+
+
+@media (min-width: 701px) and (max-width: 1024px){
+
+.header-right {
+    margin: 230px 5px 50px 5px;
+    border: 1px solid #ccc;
+}
+
+}
+  </style>
+</head>
+<body>
+<header id="banner">
+				<div class="container" style="padding:30px 10px;">
+					<div class="row">
+						<div class="col-lg-7 col-xs-12">
+						<div class="header-left">
+								<img src="images/Aster_logo_white.png" alt="logo">
+								<h1>ADULT & PAEDIATRIC BONE MARROW TRANSPLANT PROGRAMME</h1>
+								<p>Haematology | Oncology | Immunology</p>
+								<a href="#" target="_blank">Book An Appoinment</a>
+						</div>
+						</div>
+						<div class="col-lg-5 col-xs-12">
+								<div class="header-right">
+								
+									<form>
+										<h2>Enquire Now</h2>
+										  <div class="form-group">
+											<label for="name"></label>
+											<input type="Name" class="form-control" id="name" aria-describedby="name" placeholder="Name" maxlength="20"  pattern="[A-Za-z]{1,20}" required>
+										  </div>
+										  <div class="form-group">
+											<label for="email1"></label>
+											<input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Email" pattern="[6789][0-9]{9}" required>
+										  </div>
+										  <div class="form-group">
+											<label for="phonenumber"></label>
+											<input type="phonenumber" class="form-control" id="phonenumber" placeholder="Phone Number" pattern="[6789][0-9]{9}" required>
+										  </div>
+										  <div class="form-group">
+											<label for="message"></label>
+											<textarea class="form-control" id="message" rows="3"></textarea>
+										  </div>
+										  <button type="submit" class="btn btn-primary">Submit</button>
+									</form>
+									
+								</div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+</div>
+
+</header>
+			<section>
+  
+				<div class="container text-center" style="padding:30px 10px;">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-xs-12">
+						<img src="images/Group 3.png" alt="image" class="img-responsive"/>
+						</div>
+						<div class="col-lg-8 col-sm-8 col-xs-12">
+						<p class="bone-marrow-transpla">Bone Marrow Transplant (BMT) better known as haematopoietic stem cell transplant(HSCT) as bone marrow cells are transplanted</p>
+						  <p class="medicines-and-in-cer">Replacement of diseased or defective marrow with marrow from a healthy donor</p><hr class="border-top">
+						 <p class="medicines-and-in-cer">Medicines and in certain situations radiotherapy as well is given to get rid of diseased marrow and bone marrow cells from healthy donor is given to replace it.</p>
+						 <hr class="border-top"><p class="medicines-and-in-cer">IN autologous bone marrow transplant, high dose chemotherapy is given to kill cancer cells and child own marrow cells are given back</p>
+						</div>
+					
+					
+					</div>
+				</div>
+			</section>	
+			
+			<section>
+				<div class="container text-center" style="padding:30px 10px;">
+					<h2 class="sub-heading">Doctors</h2>
+					  <div class="row">
+					  
+							<div class="col-lg-6 col-sm-6 col-xs-12">
+							<div class=" doctors-bg">
+									<h3 class="sec-sub-heading">Pediatric BMT</h3>
+									<img src="images/Bitmap1.png" alt="image" class="img-responsive" style="display: initial;"/>
+									  <h4 style="color:#1D5AA6;">Dr. Vijay Agarwal</h4>
+									   <h5 class="doct-para">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</h5>
+									  <hr class="dr-hr">
+									  <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology. Dr. Agarwal has been practising Medical Oncology since 2004.</p>
+									  <button type="button" class="btn-custome">Know More</button>
+									  <hr class="border">
+									  
+									<img src="images/Bitmap1.png" alt="image" class="img-responsive" style="display: initial;"/>
+									  <h4 style="color:#1D5AA6;">Dr. Vijay Agarwal</h4>
+									  <h5 class="doct-para">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</h5>
+									  <hr class="dr-hr">
+									  <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology. Dr. Agarwal has been practising Medical Oncology since 2004.</p>
+									  <button type="button" class="btn-custome">Know More</button>
+							</div>
+							  
+							</div>
+							
+							
+						
+							<div class="col-lg-6 col-xs-12 col-sm-6">
+							<div class=" doctors-bg">
+								<h3 class="sec-sub-heading">Adult BMT</h3>
+								<img src="images/Bitmap1.png" alt="image" class="img-responsive" style="display: initial;"/>
+								  <h4 style="color:#1D5AA6;">Dr. Vijay Agarwal</h3>
+								   <h5 class="doct-para">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</h5>
+									  <hr class="dr-hr">
+								  <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology. Dr. Agarwal has been practising Medical Oncology since 2004.</p>
+								  <button type="button" class="btn-custome">Know More</button>
+									  <hr class="border">
+								  <img src="images/Bitmap1.png" alt="image" class="img-responsive" style="display: initial;"/>
+								  <h4 style="color:#1D5AA6;">Dr. Vijay Agarwal</h4>
+								  <h5 class="doct-para">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</h5>
+									  <hr class="dr-hr">
+								  <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology. Dr. Agarwal has been practising Medical Oncology since 2004.</p>
+								  <button type="button" class="btn-custome">Know More</button>
+							</div>
+							</div>
+						</div>
+				</div>
+			</section>
+			<section class="trans">
+				<div class="container text-center" style="padding:30px 10px;">
+				  <div class="row">
+					
+						<div class="col-lg-12 tran" style="padding:10px;">
+						<h2 class="sub-heading">What are the types of Bone Marrow Transplant?</h2>
+							<ul>
+							<li>Autologous Bone Marrow Transplant - Marrow cells are collected from the patient’s own body and transfused back after high dose chemotherapy. </li>
+							
+							<li>Allogenic Bone Marrow Transplant (Matched Sibling Donor) – Replacement of diseased or defective marrow with marrow from a genetically (HLA) matched sibling donor.  </li>
+							
+							<li>Allogenic Bone Marrow Transplant (Matched Unrelated Donor) – Replacement of diseased or defective marrow with marrow from a genetically (HLA) matched donor obtained from bone marrow registries in India and abroad.</li>
+							
+							<li>Haplo-Identical Bone Marrow Transplant - Replacement of diseased or defective marrow with marrow from the parent. </li>
+							
+							<li>Umbilical cord Bone Marrow Transplant - Replacement of diseased or defective marrow with marrow from a genetically (HLA) matched umbilical cord donor obtained from umbilical cord registries in India and abroad. </li>
+							
+							
+							 
+							<ul>
+						</div>
+					
+					</div>
+				</div>
+					
+			</section>	
+			<section>
+					
+				<div class="container text-center" style="padding:10px;">
+				  <div class="row">
+					
+					<div class="col-lg-12">
+					<h2 class="sub-heading">The warning signs of Immune deficiency</h2>
+					<div class="row">
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group 2.png" alt="image" class="img-responsive"/>
+						<p class="group-para">Failure to thrive – not gaining weight and height as per the age norms</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group.png" alt="image" class="img-responsive"/>
+						<p class="group-para">Infections warranting multiple hospitalizations</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group (1).png" alt="image" class="img-responsive"/>
+						<p class="group-para">Requirement of intravenous antibiotics to clear infections</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group (2).png" alt="image" class="img-responsive"/>
+						<p class="group-para">2 or more episodes of pneumonia</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group (3).png" alt="image" class="img-responsive"/>
+						<p class="group-para">Family history of death of children at young age due to immune deficiency </p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group (4).png" alt="image" class="img-responsive"/>
+						<p class="group-para">Repeated episodes of diarrhea</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group 2 (1).png" alt="image" class="img-responsive"/>
+						<p class="group-para">2 or more episodes of sinus infections within a year</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group 2 (2).png" alt="image" class="img-responsive"/>
+						<p class="group-para">2 or more episodes of ear discharge</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group 2 (3).png" alt="image" class="img-responsive"/>
+						<p class="group-para">Repeated skin infections</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="group">
+						<img src="images/Group (5).png" alt="image" class="img-responsive"/>
+						<p class="group-para">Repeated abscess formation (liver abscess, brain abscess)</p>
+						</div>
+					</div>
+
+
+
+					</div>
+					</div>
+					
+				  </div>
+				</div>
+			</section>	
+			<!--accordiance -->	
+			
+			<section>
+				<div class="container" style="padding:10px;">
+				  <div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What are the conditions that requireBone Marrow Transplant? </a>
+						</h4>
+					  </div>
+					  <div id="collapse1" class="panel-collapse collapse in">
+						<div class="panel-body">
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+						</div>
+					  </div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Which are the hematological diseases that may benefit from bone marrow transplants?</a>
+						</h4>
+					  </div>
+					  <div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">
+						
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+						</div>
+					  </div>
+					</div>
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Which are the Cancers that may benefit from bone marrow transplants?</a>
+							</h4>
+						  </div>
+						  <div id="collapse3" class="panel-collapse collapse">
+							<div class="panel-body">
+							
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Do bone marrow failure syndromes require BMT?</a>
+							</h4>
+						  </div>
+						  <div id="collapse4" class="panel-collapse collapse">
+							<div class="panel-body">
+							
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">What are Primary Immune Deficiency diseases ?</a>
+							</h4>
+						  </div>
+						  <div id="collapse6" class="panel-collapse collapse">
+							<div class="panel-body">
+							
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Which are the immune deficiencies that warrant BMT?</a>
+						</h4>
+					  </div>
+					  <div id="collapse8" class="panel-collapse collapse">
+						<div class="panel-body">
+						
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+						</div>
+					</div>
+				  </div> 
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">What makes transplants at Aster CMI unique?</a>
+						</h4>
+					  </div>
+					  <div id="collapse9" class="panel-collapse collapse">
+						<div class="panel-body">
+						
+						<ul>
+							<li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow failure syndromes like Aplastic anemia, serious immune deficiencies and      certain  genetic metabolic disorders.
+							</li>
+							<li> It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers like Lymphomas
+							</li>
+						
+						</ul>
+						</div>
+					</div>
+				  </div> 
+				</div>
+				</div>
+
+			</section>
+
+<!--end accordiance -->
+<section class="testimonial">
+	<div class="container" style="padding:10px;">
+	<h2 class="sub-heading">Testimonials</h2>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Carousel indicators ->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol> <!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item carousel-item active">
+					<div class="carsoul-iteam-left">
+						<div class="img-box">
+						<img src="images/Bitmap.png" alt="images">
+						</div>
+					</div>
+					<div class="carsoul-iteam-right">
+						<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+					
+					</div>
+					<p class="testimonial">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+					
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="carsoul-iteam-left">
+						<div class="img-box">
+						<img src="images/Bitmap.png" alt="images">
+						</div>
+					</div>
+					<div class="carsoul-iteam-right">
+						<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+					
+					</div>
+					<p class="testimonial">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+					
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="carsoul-iteam-left">
+						<div class="img-box">
+						<img src="images/Bitmap.png" alt="images">
+						</div>
+					</div>
+					<div class="carsoul-iteam-right">
+						<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+					
+					</div>
+					<p class="testimonial">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+					
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="carsoul-iteam-left">
+						<div class="img-box">
+						<img src="images/Bitmap.png" alt="images">
+						</div>
+					</div>
+					<div class="carsoul-iteam-right">
+						<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+					
+					</div>
+					<p class="testimonial">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+					
+					<div class="star-rating"> </div>
+				</div>
+				<!--<div class="item carousel-item">
+					<div class="img-box"><img src="https://i.imgur.com/8RKXAIV.jpg" alt=""></div>
+					<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+					<p class="overview"><b>Paula Wilson</b>Media Analyst </p>
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
+					<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
+					<p class="overview"><b>Antonio Moreno</b>Web Developer</p>
+					<div class="star-rating"> </div>
+				</div>-->
+			</div> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-long-arrow-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-long-arrow-right"></i> </a>
+		</div>
+		<div class="booking">
+		<a href="#" target="_blank">Book An Appoinment</a>
+		</div>
+	</div>
+
+</section>
+
+
+
+
+<!--<section class="testimonial">
+	<div class="container" style="padding:10px;">
+	<h2 class="sub-heading">Testimonials</h2>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="item carousel-item active">
+					<div class="carsoul-iteam-left">
+						<div class="img-box">
+						<img src="https://i.imgur.com/Ur43esv.jpg" alt="images">
+						</div>
+					</div>
+					<div class="carsoul-iteam-right">
+						<div class="img-box">
+						<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+						</div>
+					
+					</div>
+					<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+					<p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="img-box"><img src="https://i.imgur.com/8RKXAIV.jpg" alt=""></div>
+					<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+					<p class="overview"><b>Paula Wilson</b>Media Analyst </p>
+					<div class="star-rating"> </div>
+				</div>
+				<div class="item carousel-item">
+					<div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
+					<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
+					<p class="overview"><b>Antonio Moreno</b>Web Developer</p>
+					<div class="star-rating"> </div>
+				</div>
+			</div> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
+		</div>
+	</div>
+
+</section>-->
+
+
+
+
+
+
+
+
+<!--<div class="container my-5 justify-content-center">
+    <div class=" row justify-content-center ">
+        <div class="col-lg-6 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/nUNhspp.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic, traditional Bi tools. Vertix allow us to unserstand what is driving exceptions so we can take action Growth of data our ability to get true insight that matter was challenging with classic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">Sophia Smith</h4> <small class="mt-0 text-white">Hair Specialist</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-half-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/HjKTNkG.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic, traditional Bi tools. Vertix allow us to unserstand what is driving exceptions so we can take action Growth of data our ability to get true insight that matter was challenging with classic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">SMike Housin</h4> <small class="mt-0 text-white">Director of Marketing</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<footer>
+
+			<section>
+				<div class="container" style="padding:10px;">
+				<div class="footer-one">
+					<ul>
+						<li><a href="fecebook.com" target="_blank"><img src="images/fb.png" alt="facebook" class="img-responsive"></a></li>
+						<li><a href="fecebook.com" target="_blank"><img src="images/insta.png" alt="instagram" class="img-responsive"></a></li>
+						<li><a href="fecebook.com" target="_blank"><img src="images/youtube.png" alt="youtube" class="img-responsive"></a></li>
+						<li><a href="fecebook.com" target="_blank"><img src="images/twitter.png" alt="twitter" class="img-responsive"></a></li>
+						<li><a href="fecebook.com" target="_blank"><img src="images/linkedin.png" alt="linkedin" class="img-responsive"></a></li>
+					</ul>
+					<ul class="footer-right">
+						<li><a href="#banner"><img src="images/farrow.png" alt="facebook" class="img-responsive"></a></li>
+					</ul>
+				</div>
+				<hr>
+				  <p class="aster-cmi-all-right text-center"><strong><a href="#"> Aster CMI.</a></strong> All Rights Reserved
+                
+              </p>
+				</div>
+
+			</section>
+</footer>
+
+<script>
+$(document).ready(function () {
+var silder = $(".owl-carousel");
+silder.owlCarousel({
+autoplay: true,
+autoplayTimeout: 3000,
+autoplayHoverPause: false,
+items: 1,
+stagePadding: 20,
+center: true,
+nav: false,
+margin: 50,
+dots: true,
+loop: true,
+responsive: {
+0: { items: 1 },
+480: { items: 2 },
+575: { items: 2 },
+768: { items: 2 },
+991: { items: 3 },
+1200: { items: 4 }
+}
+});
+});
+</script>
+</body>
+</html>
